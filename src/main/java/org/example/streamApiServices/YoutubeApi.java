@@ -5,9 +5,14 @@ import org.example.streamersSource.IYoutubeStreamersSource;
 import java.util.List;
 
 public class YoutubeApi extends BaseStreamApi{
-    IYoutubeStreamersSource youtubeStreamersSource;
+    private String title = "Youtube";
+    private IYoutubeStreamersSource youtubeStreamersSource;
     public YoutubeApi(IYoutubeStreamersSource youtubeStreamersSource){
         this.youtubeStreamersSource = youtubeStreamersSource;
+    }
+    @Override
+    public String getTitlePlatform(){
+        return title;
     }
     @Override
     public int getCountStreamers() {

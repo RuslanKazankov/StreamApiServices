@@ -5,9 +5,14 @@ import org.example.streamersSource.ITwitchStreamersSource;
 import java.util.List;
 
 public class TwitchApi extends BaseStreamApi {
+    private String title = "Twitch";
     private ITwitchStreamersSource twitchStreamersSource;
     public TwitchApi(ITwitchStreamersSource twitchStreamersSource){
         this.twitchStreamersSource = twitchStreamersSource;
+    }
+    @Override
+    public String getTitlePlatform(){
+        return title;
     }
     @Override
     public int getCountStreamers() {

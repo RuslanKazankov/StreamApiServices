@@ -5,9 +5,14 @@ import org.example.streamersSource.ITiktokStreamersSource;
 import java.util.List;
 
 public class TiktokApi extends BaseStreamApi {
-    ITiktokStreamersSource tiktokStreamersSource;
+    private String title = "TikTok";
+    private ITiktokStreamersSource tiktokStreamersSource;
     public TiktokApi(ITiktokStreamersSource tiktokStreamersSource){
         this.tiktokStreamersSource = tiktokStreamersSource;
+    }
+    @Override
+    public String getTitlePlatform(){
+        return title;
     }
     @Override
     public int getCountStreamers() {
